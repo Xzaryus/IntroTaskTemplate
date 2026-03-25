@@ -43,6 +43,19 @@ section {
     display: inline-block; 
 }
 
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#myPic {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
 section.profile {
     max-width: 800px; 
     margin: 20px auto; 
@@ -230,4 +243,51 @@ contact-icons img:hover {
     border: 2px solid rgb(229, 45, 77);
     text-align: center; 
     display: block; 
+}
+
+/* Media query */
+
+@media (max-width: 800px) {
+    body {
+        box-sizing: border-box;
+        width : 99%;
+        max-width: 100%;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    section {
+        width: 95%;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+    .section-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    #myPic {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+    p {
+        width: 100%;
+    }
+    ul {
+        width: 100%;
+    }
+    nav {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav a {
+        font-size: 18px;
+        align-self: center;
+    }
 }

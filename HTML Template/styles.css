@@ -72,7 +72,7 @@ section.profile .profile-details {
     text-align: left;
 }
 
-section p:first-of-type {
+section p {
     font-size: 1.2em;
     line-height: 1.8;
     font-weight: 500;
@@ -248,18 +248,26 @@ contact-icons img:hover {
 /* Media query */
 
 @media (max-width: 800px) {
-    body {
+
+    * {
         box-sizing: border-box;
-        width : 99%;
+    }
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    body {
         max-width: 100%;
         font-size: 14px;
         display: flex;
         flex-direction: column;
         overflow-x: hidden;
+        padding: 0 10px;
     }
 
     section {
-        width: 95%;
+        width: 100%;
         max-width: 100%;
         margin: 20px auto;
     }
@@ -274,14 +282,15 @@ contact-icons img:hover {
         max-width: 200px;
         height: auto;
     }
-    p {
+    section p,li {
+        font-size: 1.2em;
         width: 100%;
     }
     ul {
         width: 100%;
     }
     nav {
-        width: 95%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -289,5 +298,8 @@ contact-icons img:hover {
     nav a {
         font-size: 18px;
         align-self: center;
+    }
+    footer {
+        width: 100%;
     }
 }
